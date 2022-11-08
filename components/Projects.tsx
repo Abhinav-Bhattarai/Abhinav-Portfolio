@@ -5,11 +5,38 @@ import Project from "./Project";
 type Props = {};
 
 const ProjectsList = [
-    { name: 'Binary Diary | Social Media Platform for all devices in Mern Stack', source: '/mongodb.svg', Description: '' },
-    { name: 'E-commerce | Full-stack website to buy and sell thrift items', source: '/express.svg', Description: '' },
-    { name: 'Market Prediction | Deep Learning project to analyze current market', source: '/react.svg', Description: '' },
-    { name: 'Randoms | Omegle clone where you can video chat with random people', source: '/node-js.svg', Description: '' },
-]
+  {
+    name: "Binary Diary | Social Media Platform for all devices in Mern Stack",
+    source: "/mongodb.svg",
+    Description: "",
+    link: "https://github.com/Abhinav-Bhattarai/Binary-Diary",
+  },
+  {
+    name: "E-commerce | Full-stack website to buy and sell thrift items",
+    source: "/express.svg",
+    Description: "",
+    link: "https://github.com/Abhinav-Bhattarai/Ecommerce",
+  },
+  {
+    name: "Market Prediction | Deep Learning project to analyze current market",
+    source: "/react.svg",
+    Description: "",
+    link: "https://github.com/Abhinav-Bhattarai/MarketPrediction",
+  },
+  {
+    name: "Randoms | Omegle clone where you can video chat with random people",
+    source: "/node-js.svg",
+    Description: "",
+    link: "https://github.com/Abhinav-Bhattarai/Randoms",
+  },
+  {
+    name: "MemeTinder | Tinder clone where you can swipe people with memes",
+    source: "/django.svg",
+    Description: "",
+    link: "https://github.com/Abhinav-Bhattarai/MemeTinder",
+  },
+  // https://github.com/Abhinav-Bhattarai/MemeTinder
+];
 
 function Projects({}: Props) {
   return (
@@ -26,15 +53,20 @@ function Projects({}: Props) {
           Projects
         </h3>
       </div>
-      <div className="w-full relative flex space-x-2 mb-4 px-1 pb-1 pt-0 overflow-x-scroll
-       overflow-y-hidden scrollbar-thin scrollbar-x-thumb-[#585858] scrollbar-x-track-[#33333] snap-x snap-mandatory">
-        {
-            ProjectsList.map((data) => {
-                return (
-                    <Project name={ data.name } source={ data.source } description={ data.Description }/>
-                )
-            })
-        }
+      <div
+        className="w-full relative flex space-x-2 mb-4 px-1 pb-1 pt-0 overflow-x-scroll
+       overflow-y-hidden scrollbar-thin scrollbar-x-thumb-[#585858] scrollbar-x-track-[#33333] snap-x snap-mandatory"
+      >
+        {ProjectsList.map((data) => {
+          return (
+            <Project
+              code_link={data.link}
+              name={data.name}
+              source={data.source}
+              description={data.Description}
+            />
+          );
+        })}
       </div>
     </motion.div>
   );
