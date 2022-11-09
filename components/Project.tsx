@@ -20,7 +20,7 @@ function Project({ source, name, description, code_link }: Props) {
 
         <div className="px-5 pb-5">
           <a href="#">
-            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+            <h5 className="text-xl font-semibold tracking-tight text-white">
               {name}
             </h5>
           </a>
